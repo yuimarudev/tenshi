@@ -1,0 +1,20 @@
+diff --git a/lib/register.js b/lib/register.js
+index 53e8c4414c0c0c6551263cd72c2fa6f58ba5352a..0fece26b972d01d4fc8eda03ea2d7d9d35e71ca8 100644
+--- a/lib/register.js
++++ b/lib/register.js
+@@ -46,15 +46,6 @@ function compile(sourcecode, filename, options, async = false) {
+     if (filename.endsWith('.d.ts')) {
+         return '';
+     }
+-    if (options.files && options.files.length) {
+-        if (PLATFORM === 'win32' &&
+-            options.files.every((file) => filename !== (0, path_1.resolve)(process.cwd(), file))) {
+-            return sourcecode;
+-        }
+-        if (PLATFORM !== 'win32' && options.files.every((file) => !filename.endsWith(file))) {
+-            return sourcecode;
+-        }
+-    }
+     if (options && typeof options.fallbackToTs === 'function' && options.fallbackToTs(filename)) {
+         delete options.fallbackToTs;
+         const { outputText, sourceMapText } = ts.transpileModule(sourcecode, {
