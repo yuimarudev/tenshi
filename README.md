@@ -1,9 +1,14 @@
-# tenshi
-Music Player
+# tenshi (天使)
+A useful audio player
 
-## todo
+# Planned features
+- Light / Dark Theme
 - Playlists
-- Volume adjustment function for each song
+- Volume adjustment for each audio
+- Fetching audio from Youtube and Spotify at startup (avoiding copyright violations in Japan)
+
+## TODO
+- All thing
 
 ## how to launch?
 ```bash
